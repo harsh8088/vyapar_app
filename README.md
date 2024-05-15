@@ -1,6 +1,6 @@
 # vyapar_app
 
-A new Flutter project.
+A Trading app in Flutter.
 
 ## Getting Started
 

@@ -1,0 +1,38 @@
+{
+  "device_type": 4,
+  "scroll_text": "Please expect some delay if doctor is busy",
+  "tokens": [
+    {
+      "id": 21,
+      "token": "A 004",
+      "service_name": "323",
+      "counter": "Aditya Name",
+      "called": "",
+      "called_flag": 0,
+      "called_token_count": 0,
+      "patient_name": "Irish Test Test Test Bggshhskf",
+      "uhid": "SW01.0000497315"
+    },
+    {
+      "id": 22,
+      "token": "A 005",
+      "service_name": "323",
+      "counter": "Aditya Name",
+      "called": "Nurse Assessment",
+      "called_flag": 1,
+      "called_token_count": 0,
+      "patient_name": "Harish Test",
+      "uhid": "SW01.0000497316"
+    }
+  ],
+  "hospital": {
+    "name": "ILS Hospital",
+    "id": 51,
+    "address": "52\/2 & 52\/3, , Opposite INTEL, Outer Ring Road",
+    "hospital_logo": "",
+    "floor": {
+      "name": "First Floor",
+      "id": 1
+    }
+  }
+}
