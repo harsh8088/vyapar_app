@@ -2,11 +2,47 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:formz/formz.dart';
+import 'package:vyapar_app/home/home.dart';
 
 import 'bloc/login_bloc.dart';
 
-class LoginBody extends StatelessWidget {
+class LoginBody extends StatefulWidget {
   const LoginBody({super.key});
+
+  @override
+  _LoginBodyState createState() => _LoginBodyState();
+
+}
+
+
+class _LoginBodyState extends State<LoginBody> {
+  final _controller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(_onTextChanged);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _onTextChanged() {
+    if (_controller.text.length == 6 && RegExp(r'^\d{6}$').hasMatch(_controller.text)) {
+      _navigateToSecondScreen();
+    }
+  }
+
+  void _navigateToSecondScreen() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,28 +124,32 @@ class LoginBody extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.only(
                         left: 20.0, right: 20.0, top: 15, bottom: 10),
-                    child: TextFormField(
-                        style: const TextStyle(
-                          fontSize: 22,
-                        ),
-                        obscureText: true,
-                        obscuringCharacter: "•",
-                        keyboardType: TextInputType.number,
-                        // maxLength: 6,
-                        decoration: const InputDecoration(
-                          suffixIcon: Icon(
-                            Icons.arrow_circle_right_outlined,
-                            size: 28,
-                            color: Colors.blueAccent,
+                    child: SizedBox(
+                      height: 55,
+                      child: TextFormField(
+                        controller: _controller,
+                          style: const TextStyle(
+                            fontSize: 22,
                           ),
-                          focusColor: Colors.grey,
-                          focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.grey, width: 2.0),
-                          ),
-                          labelText: 'Enter TOTP',
-                          // focusColor: Colors.grey,
-                        ))),
+                          obscureText: true,
+                          obscuringCharacter: "•",
+                          keyboardType: TextInputType.number,
+                          // maxLength: 6,
+                          decoration: const InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.arrow_circle_right_outlined,
+                              size: 28,
+                              color: Colors.blueAccent,
+                            ),
+                            focusColor: Colors.grey,
+                            focusedBorder: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.grey, width: 2.0),
+                            ),
+                            labelText: 'Enter TOTP',
+                            // focusColor: Colors.grey,
+                          )),
+                    )),
                 const SizedBox(
                   height: 30,
                 ),
@@ -166,4 +206,6 @@ class LoginBody extends StatelessWidget {
           ],
         ));
   }
+
+
 }
