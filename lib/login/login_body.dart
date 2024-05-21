@@ -10,10 +10,8 @@ class LoginBody extends StatefulWidget {
   const LoginBody({super.key});
 
   @override
-  _LoginBodyState createState() => _LoginBodyState();
-
+  State<LoginBody> createState() => _LoginBodyState();
 }
-
 
 class _LoginBodyState extends State<LoginBody> {
   final _controller = TextEditingController();
@@ -31,7 +29,8 @@ class _LoginBodyState extends State<LoginBody> {
   }
 
   void _onTextChanged() {
-    if (_controller.text.length == 6 && RegExp(r'^\d{6}$').hasMatch(_controller.text)) {
+    if (_controller.text.length == 6 &&
+        RegExp(r'^\d{6}$').hasMatch(_controller.text)) {
       _navigateToSecondScreen();
     }
   }
@@ -127,7 +126,7 @@ class _LoginBodyState extends State<LoginBody> {
                     child: SizedBox(
                       height: 55,
                       child: TextFormField(
-                        controller: _controller,
+                          controller: _controller,
                           style: const TextStyle(
                             fontSize: 22,
                           ),
@@ -206,6 +205,4 @@ class _LoginBodyState extends State<LoginBody> {
           ],
         ));
   }
-
-
 }

@@ -6,7 +6,7 @@ import '../../config/constants.dart';
 import '../../networking/ApiProvider.dart';
 
 class LoginRepository {
-  ApiProvider _provider = ApiProvider();
+  final ApiProvider _provider = ApiProvider();
   static final LoginRepository _loginRepository = LoginRepository._();
 
   LoginRepository._();
