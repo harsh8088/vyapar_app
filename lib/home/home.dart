@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:vyapar_app/home/portfolio.dart';
+import 'package:vyapar_app/home/watchlist/watchlist.dart';
+
+import 'account.dart';
+import 'bids.dart';
+import 'orders.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   final ExpansionTileController controller = ExpansionTileController();
+  final PageController pageController = PageController(initialPage: 0);
 
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
@@ -43,42 +50,10 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              automaticallyImplyLeading: false,
-              // Provide a standard title.
-              title: const Row(
-                children: [
-                  Text("Watchlist"),
-                  Spacer(),
-                  Icon(
-                    Icons.keyboard_arrow_down_outlined,
-                    size: 36,
-                  )
-                ],
-              ),
-              // Allows the user to reveal the app bar if they begin scrolling
-              // back up the list of items.
-              floating: true,
-              // Display a placeholder widget to visualize the shrinking size.
-              flexibleSpace: Container(
-                color: Colors.grey.shade300,
-              ),
-              // Make the initial height of the SliverAppBar larger than normal.
-              expandedHeight: 60,
-            ),
-            SliverList(
-              // Use a delegate to build items as they're scrolled on screen.
-              delegate: SliverChildBuilderDelegate(
-                // The builder function returns a ListTile with a title that
-                // displays the index of the current item.
-                (context, index) => ListTile(title: Text('Item #$index')),
-                // Builds 20 ListTiles
-                childCount: 20,
-              ),
-            ),
-          ],
+        child: PageView(
+          physics: const NeverScrollableScrollPhysics(),
+          controller: pageController,
+          children: [WatchList(), Orders(), Portfolio(), Bids(), Account()],
         ),
       ),
       bottomNavigationBar: Theme(
@@ -156,6 +131,7 @@ class _HomeScreenState extends State<HomeScreen>
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      pageController.jumpToPage(index);
     });
   }
 }
