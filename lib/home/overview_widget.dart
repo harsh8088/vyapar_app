@@ -7,12 +7,12 @@ class ExpandingWidget extends StatefulWidget {
   final VoidCallback? onToggle;
 
   const ExpandingWidget({
-    Key? key,
+    super.key,
     required this.child,
     this.initiallyVisible = false,
     this.duration = const Duration(milliseconds: 300),
     this.onToggle,
-  }) : super(key: key);
+  });
 
   @override
   State<ExpandingWidget> createState() => _ExpandingWidgetState();

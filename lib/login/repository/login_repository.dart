@@ -1,8 +1,6 @@
 // import 'package:http/http.dart' as http;
 import 'dart:io';
 
-
-import '../../config/constants.dart';
 import '../../networking/ApiProvider.dart';
 
 class LoginRepository {
@@ -22,8 +20,7 @@ class LoginRepository {
         'Content-Type': 'application/json',
       };
       var body = {'mobile': mobile};
-      final response =
-          await _provider.post("", headers, body);
+      final response = await _provider.post("", headers, body);
       return response;
     } on SocketException {
       rethrow;

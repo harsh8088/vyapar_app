@@ -19,8 +19,6 @@ class _HomeScreenState extends State<HomeScreen>
   final PageController pageController = PageController(initialPage: 0);
 
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   // Create a tab controller
   late TabController tabController;

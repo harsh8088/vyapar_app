@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Items extends StatefulWidget {
-  const Items({Key? key}) : super(key: key);
+  const Items({super.key});
 
   @override
   State<Items> createState() => _WatchListState();
@@ -50,7 +50,8 @@ class _WatchListState extends State<Items> with SingleTickerProviderStateMixin {
                     const SizedBox(
                       height: 4,
                     ),
-                    const Text("-11.95 (-1.59%)", style: TextStyle(fontSize: 10))
+                    const Text("-11.95 (-1.59%)",
+                        style: TextStyle(fontSize: 10))
                   ],
                 ))
               ],

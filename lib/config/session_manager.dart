@@ -12,7 +12,7 @@ class SessionManager {
 
   SessionManager._internal() {
     // initialization logic
-    storage = new FlutterSecureStorage();
+    storage = const FlutterSecureStorage();
   }
 
   /// LoginUser

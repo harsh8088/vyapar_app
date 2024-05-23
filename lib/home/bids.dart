@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Bids extends StatelessWidget {
-  const Bids({Key? key}) : super(key: key);
+  const Bids({super.key});
 
   @override
   Widget build(BuildContext context) {
