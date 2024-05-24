@@ -51,7 +51,7 @@ class _LoginBodyState extends State<LoginBody> {
             ScaffoldMessenger.of(context)
               ..hideCurrentSnackBar()
               ..showSnackBar(
-                SnackBar(content: Text("state.message")),
+                const SnackBar(content: Text("state.message")),
               );
           }
           if (state.status.isSubmissionSuccess) {
@@ -154,7 +154,7 @@ class _LoginBodyState extends State<LoginBody> {
                 ),
                 const Text(
                   "Forgot TOTP",
-                  style: TextStyle(color: Colors.blueAccent),
+                  style: TextStyle(color: Colors.blueAccent, fontSize: 13),
                 ),
                 const SizedBox(
                   height: 40,
@@ -169,7 +169,7 @@ class _LoginBodyState extends State<LoginBody> {
                   ],
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
@@ -177,7 +177,8 @@ class _LoginBodyState extends State<LoginBody> {
                     text: TextSpan(
                       text:
                           'NSE & BSE -SEBI Registration no 123138126486283648236462364.: 3248632648263462834 | MCX - SEBI Registration no. :INZ 000232131231| CDSL -SEBI Registration no.:IN-DP-431-209 | ',
-                      style: TextStyle(color: Colors.grey.shade500),
+                      style:
+                          TextStyle(color: Colors.grey.shade400, fontSize: 12),
                       children: const [
                         TextSpan(
                           text: 'Smart Online Dispute Resolution',

@@ -1,38 +1,52 @@
 {
   "device_type": 4,
-  "scroll_text": "Please expect some delay if doctor is busy",
-  "tokens": [
+  "scroll_text": "",
+  "data": [
     {
       "id": 21,
-      "token": "A 004",
-      "service_name": "323",
-      "counter": "Aditya Name",
-      "called": "",
-      "called_flag": 0,
-      "called_token_count": 0,
-      "patient_name": "Irish Test Test Test Bggshhskf",
-      "uhid": "SW01.0000497315"
+      "name": "GAIL",
+      "type": "NSE",
+      "holdings": "",
+      "is_event": true,
+      "lastPrice": "205",
+      "change": "+5.00",
+      "pChange": "+2.51%"
     },
     {
       "id": 22,
-      "token": "A 005",
-      "service_name": "323",
-      "counter": "Aditya Name",
-      "called": "Nurse Assessment",
-      "called_flag": 1,
-      "called_token_count": 0,
-      "patient_name": "Harish Test",
-      "uhid": "SW01.0000497316"
+      "name": "SAINTGOBAIN",
+      "type": "BSE",
+      "holdings": "",
+      "is_event": false,
+      "lastPrice": "128",
+      "change": "+0.55",
+      "pChange": "+0.43%"
+    },
+    {
+      "id": 23,
+      "name": "LT",
+      "type": "NSE",
+      "holdings": "114",
+      "is_event": true,
+      "lastPrice": "3631",
+      "change": "+47.40",
+      "pChange": "+1.31%"
     }
   ],
-  "hospital": {
-    "name": "ILS Hospital",
-    "id": 51,
-    "address": "52\/2 & 52\/3, , Opposite INTEL, Outer Ring Road",
-    "hospital_logo": "",
-    "floor": {
-      "name": "First Floor",
-      "id": 1
+  "overview": [
+    {
+      "id": 301,
+      "name": "NIFTY 50",
+      "ltp": "23,000",
+      "opening_change": "",
+      "opening_percentage": "+1.31%"
+    },
+    {
+      "id": 302,
+      "name": "NIFTY BANK",
+      "ltp": "48,920",
+      "opening_change": "",
+      "opening_percentage": "+1.31%"
     }
-  }
+  ]
 }

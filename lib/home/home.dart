@@ -51,7 +51,13 @@ class _HomeScreenState extends State<HomeScreen>
         child: PageView(
           physics: const NeverScrollableScrollPhysics(),
           controller: pageController,
-          children: [WatchList(), Orders(), Portfolio(), Bids(), Account()],
+          children: const [
+            WatchList(),
+            Orders(),
+            Portfolio(),
+            Bids(),
+            Account()
+          ],
         ),
       ),
       bottomNavigationBar: Theme(
@@ -95,34 +101,6 @@ class _HomeScreenState extends State<HomeScreen>
           onTap: _onItemTapped,
         ),
       ),
-    );
-  }
-
-  TabBar getTabBar() {
-    return TabBar(
-      tabs: <Tab>[
-        Tab(
-          // set icon to the tab
-          icon: Icon(Icons.favorite),
-        ),
-        Tab(
-          icon: Icon(Icons.adb),
-        ),
-        Tab(
-          icon: Icon(Icons.airport_shuttle),
-        ),
-      ],
-      // setup the controller
-      controller: tabController,
-    );
-  }
-
-  TabBarView getTabBarView(var tabs) {
-    return TabBarView(
-      // Add tabs as widgets
-      children: tabs,
-      // set the controller
-      controller: tabController,
     );
   }
 

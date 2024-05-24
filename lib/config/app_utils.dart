@@ -5,7 +5,9 @@ class AppUtils {
   static String getGender(int? gender) {
     if (gender == 1) {
       return "F";
-    } else if (gender == 2) return "M";
+    } else if (gender == 2) {
+      return "M";
+    }
     return "";
   }
 
@@ -58,7 +60,7 @@ class AppUtils {
     //     parse(document.body?.text).documentElement?.text;
     // return parsedString == null ? "" : parsedString;
     try {
-      return Bidi.stripHtmlIfNeeded("$htmlString");
+      return Bidi.stripHtmlIfNeeded(htmlString);
     } catch (_) {
       return "";
     }

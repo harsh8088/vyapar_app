@@ -11,7 +11,6 @@ class WatchList extends StatefulWidget {
 class _WatchListState extends State<WatchList>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
-  final PageController pageController = PageController(initialPage: 0);
   int _selectedIndex = 0;
 
   @override
@@ -63,9 +62,8 @@ class _WatchListState extends State<WatchList>
             dividerHeight: 0,
             tabAlignment: TabAlignment.start,
             isScrollable: true,
-            tabs: <Tab>[
+            tabs: const <Tab>[
               Tab(
-                // set icon to the tab
                 text: "Consumer Staples",
               ),
               Tab(
@@ -93,7 +91,6 @@ class _WatchListState extends State<WatchList>
         Expanded(
           child: TabBarView(
             controller: tabController,
-            // physics: const NeverScrollableScrollPhysics(),
             children: const [
               Items(),
               Items(),
@@ -187,7 +184,6 @@ class _WatchListState extends State<WatchList>
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      pageController.jumpToPage(index);
     });
   }
 
