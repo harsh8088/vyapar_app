@@ -28,13 +28,13 @@ class _WatchListState extends State<Items> with SingleTickerProviderStateMixin {
                   children: [
                     Text(
                       "TRENT",
-                      style: TextStyle(fontSize: 14),
+                      style: TextStyle(fontSize: 12),
                     ),
                     SizedBox(
                       height: 4,
                     ),
                     Text("NSE  140",
-                        style: TextStyle(color: Colors.grey, fontSize: 12))
+                        style: TextStyle(color: Colors.grey, fontSize: 11))
                   ],
                 )),
                 const Spacer(),
@@ -45,13 +45,13 @@ class _WatchListState extends State<Items> with SingleTickerProviderStateMixin {
                     Text(
                       "23,054.24",
                       style: TextStyle(
-                          color: Colors.redAccent.shade400, fontSize: 12),
+                          color: Colors.redAccent.shade400, fontSize: 11),
                     ),
                     const SizedBox(
                       height: 4,
                     ),
                     const Text("-11.95 (-1.59%)",
-                        style: TextStyle(fontSize: 10))
+                        style: TextStyle(fontSize: 11))
                   ],
                 ))
               ],

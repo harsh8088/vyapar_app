@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vyapar_app/home/portfolio.dart';
+import 'package:vyapar_app/home/portfolio/portfolio.dart';
 import 'package:vyapar_app/home/watchlist/watchlist.dart';
 
 import 'account.dart';
