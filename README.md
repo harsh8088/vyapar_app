@@ -1,6 +1,6 @@
 # vyapar_app
 
-A Trading app in Flutter.
+A Trading app is a business management application designed for small and medium-sized enterprises (SMEs) to handle billing, accounting, inventory, and expense tracking. It helps users create invoices, manage stock, generate financial reports, and monitor cash flow — all in one place.
 
 ## Getting Started
 
